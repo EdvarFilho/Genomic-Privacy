@@ -21,7 +21,6 @@ def proj(x, desired_sum, min_value=1):
 
 def min_l2_norm(arr, desired_sum, num_steps=10, min_value=1):
     x0 = arr.copy()
-
     alpha = 0.1
     gradient = lambda y: l2_gradient(arr, y)
     xs = gradient_descent(x0, [alpha]*num_steps, gradient, desired_sum, proj, min_value)
@@ -29,25 +28,25 @@ def min_l2_norm(arr, desired_sum, num_steps=10, min_value=1):
 
 def gerarTabelas(dataset):
     tabsCont = {}
-    for i in range(0, 100):
+    for i in range(0, dataset.shape[1] - 1):
         casos0, casos1, casos2, controles0, controles1, controles2 = 0, 0, 0, 0, 0, 0
         for j in range(0, dataset.shape[0]):
-            if(dataset[j,i] == 0 and dataset[j,100]=='Caso'):
+            if(dataset[j,i] == 0 and dataset[j,dataset.shape[1]-1]=='Caso'):
                 casos0 += 1
-            elif(dataset[j,i] == 1 and dataset[j,100]=='Caso'):
+            elif(dataset[j,i] == 1 and dataset[j,dataset.shape[1]-1]=='Caso'):
                 casos1 += 1
-            elif(dataset[j,i] == 2 and dataset[j,100]=='Caso'):
+            elif(dataset[j,i] == 2 and dataset[j,dataset.shape[1]-1]=='Caso'):
                 casos2 += 1
-            elif(dataset[j,i] == 0 and dataset[j,100]=='Controle'):
+            elif(dataset[j,i] == 0 and dataset[j,dataset.shape[1]-1]=='Controle'):
                 controles0 += 1
-            elif(dataset[j,i] == 1 and dataset[j,100]=='Controle'):
+            elif(dataset[j,i] == 1 and dataset[j,dataset.shape[1]-1]=='Controle'):
                 controles1 += 1
-            elif(dataset[j,i] == 2 and dataset[j,100]=='Controle'):
+            elif(dataset[j,i] == 2 and dataset[j,dataset.shape[1]-1]=='Controle'):
                 controles2 += 1
         tabsCont[i] = [[casos0, casos1, casos2],[controles0, controles1, controles2]]
     return tabsCont
 
-def mre(arr_pred, arr_true):     
+def mre(arr_pred, arr_true):
     error = np.mean(np.abs((arr_pred - arr_true)/arr_true))
     return error
 
@@ -61,7 +60,10 @@ def chi(tabs):
         E = np.zeros(tab.shape)
         for i in range(E.shape[0]):
             for j in range(E.shape[1]):
-                E[i,j] = s[j]*m[i]/n
+                if(n == 0):
+                    E[i,j] = 0
+                else:
+                    E[i,j] = s[j]*m[i]/n
         qui = 0
         for i in range(E.shape[0]):
             for j in range(E.shape[1]):
