@@ -1,5 +1,6 @@
 import numpy as np
 from scipy.stats import chi2
+from scipy.special import comb
 
 def gradient_descent(init, steps, grad, desired_sum, proj=lambda x: x, min_value=1):
     xs = [init]
@@ -47,7 +48,13 @@ def gerarTabelas(dataset):
     return tabsCont
 
 def mre(arr_pred, arr_true):
-    error = np.mean(np.abs((arr_pred - arr_true)/arr_true))
+    e = []
+    for i in range(len(arr_true)):
+        if(arr_true[i]==0):
+            e.append(0)
+        else:
+            e.append(np.abs((arr_pred[i] - arr_true[i])/arr_true[i]))
+    error = np.mean(np.array(e))
     return error
 
 def chi(tabs):
@@ -74,9 +81,52 @@ def chi(tabs):
         chisq.append(qui)
     return chisq
 
+def fisher(tabs):
+    fis = []
+    for i in range(0, len(tabs)):
+        tab = np.array(tabs[i])
+        s = np.sum(tab, axis = 0)
+        n = np.sum(s)
+        num = comb(s[0], tab[0,0], exact=True)*comb(s[1], tab[0,1], exact=True)*comb(s[2], tab[0,2], exact=True)
+        den = comb(n, (tab[0,0]+tab[0,1]+tab[0,2]), exact=True)
+        p = num/den
+        fis.append(p)
+    return fis
+
+def cochran(tabs):
+    coc = []
+    for i in range(0, len(tabs)):
+        tab = np.array(tabs[i])
+        s = np.sum(tab, axis = 0)
+        n = np.sum(s)
+        num = n * ((2 * s[0] + s[1] - 2 * (2 * tab[0,0] + tab[0,1]))**2)
+        den = 4 * n * s[0] + n * s[1] - ((2 * s[0] + s[1])**2)
+        if(den == 0):
+            coc.append(0)
+        else:
+            T = num/den
+            coc.append(T)
+    return coc
+
 def pValue(chiOriginal, df):
     ps = []
     for i in range(0, len(chiOriginal)):
         p = chi2.sf(chiOriginal[i], df)
         ps.append(p)
     return ps
+
+def KL(data, pri_data):
+    data /= np.sum(data)
+    pri_data /= np.sum(pri_data)
+    kl = 0
+    for i in range(len(pri_data)):
+        if(data[i]==0):
+            ld = 0
+        else:
+            ld = np.log(data[i])
+        if(pri_data[i]==0):
+            lp = 0
+        else:
+            lp = np.log(pri_data[i])
+        kl += data[i] * ld - data[i] * lp
+    return kl
