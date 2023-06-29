@@ -1,0 +1,286 @@
+D1
+
+Epsilon: 0.1
+   +MSE:
+      ->Proposta: 12.449031268231389
+      ->Yamamoto: 74.0623511717652
+   +MAE:
+      ->Proposta: 2.4456591441803797
+      ->Yamamoto: 4.790897919837685
+   +MRE:
+      ->Proposta: 32419.523670752
+      ->Yamamoto: 62126.268122364745
+   +KL Divergência:
+      ->Proposta: 1.2447987838644208
+      ->Yamamoto: 2.5274434548097613
+Epsilon: 0.5
+   +MSE:
+      ->Proposta: 0.6418968471286721
+      ->Yamamoto: 3.3858603371408145
+   +MAE:
+      ->Proposta: 0.5607055999394912
+      ->Yamamoto: 1.3117873067177872
+   +MRE:
+      ->Proposta: 7014.1751502032275
+      ->Yamamoto: 17150.661086417324
+   +KL Divergência:
+      ->Proposta: 1.1642367587890865
+      ->Yamamoto: 2.1198372842938746
+Epsilon: 1
+   +MSE:
+      ->Proposta: 0.20171750131347066
+      ->Yamamoto: 1.0284388116531276
+   +MAE:
+      ->Proposta: 0.30617164401965924
+      ->Yamamoto: 0.7735558517572275
+   +MRE:
+      ->Proposta: 3683.481375262442
+      ->Yamamoto: 10140.999871620472
+   +KL Divergência:
+      ->Proposta: 0.9104874712183835
+      ->Yamamoto: 2.086414691226288
+Epsilon: 2
+   +MSE:
+      ->Proposta: 0.07768461324170403
+      ->Yamamoto: 0.48599462511408464
+   +MAE:
+      ->Proposta: 0.16135551466238535
+      ->Yamamoto: 0.5325060148909843
+   +MRE:
+      ->Proposta: 2270.1541931762226
+      ->Yamamoto: 6936.916437142338
+   +KL Divergência:
+      ->Proposta: 0.569647183374935
+      ->Yamamoto: 2.2189477526489063
+Epsilon: 5
+   +MSE:
+      ->Proposta: 0.04319074444271039
+      ->Yamamoto: 0.3190295024059641
+   +MAE:
+      ->Proposta: 0.0794786058852485
+      ->Yamamoto: 0.41191951085575546
+   +MRE:
+      ->Proposta: 1709.7579864217837
+      ->Yamamoto: 5428.751971113289
+   +KL Divergência:
+      ->Proposta: 0.05839923360025658
+      ->Yamamoto: 2.271099168836904
+Epsilon: 7
+   +MSE:
+      ->Proposta: 0.04197926066605438
+      ->Yamamoto: 0.21709828283643146
+   +MAE:
+      ->Proposta: 0.07536817938692629
+      ->Yamamoto: 0.28139032707099654
+   +MRE:
+      ->Proposta: 1684.905787430711
+      ->Yamamoto: 3688.839632300439
+   +KL Divergência:
+      ->Proposta: 0.0070483470746310105
+      ->Yamamoto: 2.379903798972941
+Epsilon: 10
+   +MSE:
+      ->Proposta: 0.04180242479368079
+      ->Yamamoto: 0.3578987317729568
+   +MAE:
+      ->Proposta: 0.07476074204383765
+      ->Yamamoto: 0.40022480189510323
+   +MRE:
+      ->Proposta: 1680.818375650184
+      ->Yamamoto: 5241.455181541858
+   +KL Divergência:
+      ->Proposta: 0.0005333134770326203
+      ->Yamamoto: 2.5007939384049465
+
+
+D2
+
+Epsilon: 0.1
+   +MSE:
+      ->CTPriv: 183.1798912753909
+      ->Yamamoto: 836.8921467530923
+   +MAE:
+      ->CTPriv: 6.7612926393582695
+      ->Yamamoto: 14.97040409516325
+   +MRE:
+      ->CTPriv: 3556335.054510329
+      ->Yamamoto: 9445884.42349371
+   +KL Divergência:
+      ->CTPriv: 1.5451455851662816
+      ->Yamamoto: 1.8625120690495602
+Epsilon: 0.5
+   +MSE:
+      ->CTPriv: 1.8835036782351136
+      ->Yamamoto: 33.90622134466073
+   +MAE:
+      ->CTPriv: 0.8189588040520981
+      ->Yamamoto: 3.3894753682885055
+   +MRE:
+      ->CTPriv: 192388.80454939388
+      ->Yamamoto: 2157177.468114489
+   +KL Divergência:
+      ->CTPriv: 0.48874424474661016
+      ->Yamamoto: 1.1861382598307402
+Epsilon: 1
+   +MSE:
+      ->CTPriv: 0.9132735187853575
+      ->Yamamoto: 8.865330165330713
+   +MAE:
+      ->CTPriv: 0.6130777888088828
+      ->Yamamoto: 1.9037417427143768
+   +MRE:
+      ->CTPriv: 65803.29702955355
+      ->Yamamoto: 1211657.2814021981
+   +KL Divergência:
+      ->CTPriv: 0.1521161839129211
+      ->Yamamoto: 1.1069201849777295
+Epsilon: 2
+   +MSE:
+      ->CTPriv: 0.7266605672841304
+      ->Yamamoto: 2.5091666368471888
+   +MAE:
+      ->CTPriv: 0.561783696780811
+      ->Yamamoto: 1.1553520796213548
+   +MRE:
+      ->CTPriv: 34342.38634202614
+      ->Yamamoto: 733573.1254103098
+   +KL Divergência:
+      ->CTPriv: 0.03261514999104985
+      ->Yamamoto: 0.9192117770022736
+Epsilon: 5
+   +MSE:
+      ->CTPriv: 0.6871979470549132
+      ->Yamamoto: 0.6187776704158948
+   +MAE:
+      ->CTPriv: 0.5500416167770066
+      ->Yamamoto: 0.6145731071188774
+   +MRE:
+      ->CTPriv: 27130.17038893461
+      ->Yamamoto: 388274.68965824845
+   +KL Divergência:
+      ->CTPriv: 0.0012367826326813247
+      ->Yamamoto: 1.0551637029820238
+Epsilon: 7
+   +MSE:
+      ->CTPriv: 0.6857913674884861
+      ->Yamamoto: 0.5621722392473675
+   +MAE:
+      ->CTPriv: 0.5496554310099614
+      ->Yamamoto: 0.619959437756829
+   +MRE:
+      ->CTPriv: 26879.34052315295
+      ->Yamamoto: 393854.1876183258
+   +KL Divergência:
+      ->CTPriv: 0.000171149507050381
+      ->Yamamoto: 0.9745153936619442
+Epsilon: 10
+   +MSE:
+      ->CTPriv: 0.6855474594824689
+      ->Yamamoto: 0.38750042576473104
+   +MAE:
+      ->CTPriv: 0.5495859591470197
+      ->Yamamoto: 0.4624653399898492
+   +MRE:
+      ->CTPriv: 26843.228637079475
+      ->Yamamoto: 293721.245412727
+   +KL Divergência:
+      ->CTPriv: 8.733870808186135e-06
+      ->Yamamoto: 1.1133478809635442
+
+
+D3
+
+Epsilon: 0.1
+   +MSE:
+      ->CTPriv: 2.753533360508503
+      ->Yamamoto: 1162.1890775743143
+   +MAE:
+      ->CTPriv: 0.8679624920060143
+      ->Yamamoto: 17.574166245074025
+   +MRE:
+      ->CTPriv: 380533.1723307
+      ->Yamamoto: 11408600.177842015
+   +KL Divergência:
+      ->CTPriv: 1.3759394408396746
+      ->Yamamoto: 2.1177407633414704
+Epsilon: 0.5
+   +MSE:
+      ->CTPriv: 0.18590805060343446
+      ->Yamamoto: 46.671705166567996
+   +MAE:
+      ->CTPriv: 0.24758552094665248
+      ->Yamamoto: 3.881672786294459
+   +MRE:
+      ->CTPriv: 20380.77586099304
+      ->Yamamoto: 2495324.196545257
+   +KL Divergência:
+      ->CTPriv: 0.17140679608134018
+      ->Yamamoto: 1.448818274849573
+Epsilon: 1
+   +MSE:
+      ->CTPriv: 0.15621690105590363
+      ->Yamamoto: 12.138989222469245
+   +MAE:
+      ->CTPriv: 0.22745051564473143
+      ->Yamamoto: 2.184389663964359
+   +MRE:
+      ->CTPriv: 8256.582705820083
+      ->Yamamoto: 1417397.4973968328
+   +KL Divergência:
+      ->CTPriv: 0.044498471431351216
+      ->Yamamoto: 1.2216462285550855
+Epsilon: 2
+   +MSE:
+      ->CTPriv: 0.15007748352994085
+      ->Yamamoto: 3.376485431164558
+   +MAE:
+      ->CTPriv: 0.22260666843286359
+      ->Yamamoto: 1.3489838449322993
+   +MRE:
+      ->CTPriv: 5119.2169409974895
+      ->Yamamoto: 888281.6343453731
+   +KL Divergência:
+      ->CTPriv: 0.009060918673715399
+      ->Yamamoto: 1.0584282760922559
+Epsilon: 5
+   +MSE:
+      ->CTPriv: 0.14861514469989537
+      ->Yamamoto: 0.8142558698294637
+   +MAE:
+      ->CTPriv: 0.221520652597922
+      ->Yamamoto: 0.7419676666443357
+   +MRE:
+      ->CTPriv: 4390.302083032146
+      ->Yamamoto: 480541.7062890688
+   +KL Divergência:
+      ->CTPriv: 0.00034304782144769304
+      ->Yamamoto: 1.0352786030021477
+Epsilon: 7
+   +MSE:
+      ->CTPriv: 0.14859158485873697
+      ->Yamamoto: 0.5222362640290132
+   +MAE:
+      ->CTPriv: 0.22150846917387268
+      ->Yamamoto: 0.5714998655425599
+   +MRE:
+      ->CTPriv: 4366.268018850637
+      ->Yamamoto: 368702.39826225414
+   +KL Divergência:
+      ->CTPriv: 4.606698546172265e-05
+      ->Yamamoto: 1.126729592097417
+Epsilon: 10
+   +MSE:
+      ->CTPriv: 0.14857842385178713
+      ->Yamamoto: 0.4775236266165198
+   +MAE:
+      ->CTPriv: 0.22150045191923978
+      ->Yamamoto: 0.5624781024281689
+   +MRE:
+      ->CTPriv: 4361.936004377033
+      ->Yamamoto: 364692.6055294635
+   +KL Divergência:
+      ->CTPriv: 2.0538521246437797e-06
+      ->Yamamoto: 1.1229059187609491
+
+D4
+
